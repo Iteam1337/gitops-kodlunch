@@ -2,13 +2,13 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
 metadata:
-  name: reading-room
+  name: image-update-automation
   namespace: flux-system
 spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: operations
+    name: gitops-kodlunch
     namespace: flux-system
   git:
     checkout:
@@ -22,5 +22,5 @@ spec:
     push:
       branch: main
   update:
-    path: ./apps/base
+    path: ./apps
     strategy: Setters
