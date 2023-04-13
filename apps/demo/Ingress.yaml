@@ -2,8 +2,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx
-  namespace: nginx
+  name: demo
+  namespace: demo
   annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt"
@@ -11,7 +11,7 @@ spec:
   tls:
     - hosts:
         - gitops.iteam.life
-      secretName: nginx-tls
+      secretName: demo-tls
   rules:
     - host: gitops.iteam.life
       http:
@@ -20,6 +20,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: nginx
+                name: demo
                 port:
                   number: 80
