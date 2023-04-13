@@ -9,4 +9,4 @@ spec:
     branch: main
   secretRef:
     name: git
-  url: ssh://git@github.com:22/iteam1337/gitlab-kodlunch.git
+  url: ssh://git@github.com:22/iteam1337/gitops-kodlunch.git
