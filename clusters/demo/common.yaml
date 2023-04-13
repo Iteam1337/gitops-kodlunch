@@ -18,7 +18,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: controllers
+  name: infra-controllers
   namespace: flux-system
 spec:
   interval: 1h
@@ -34,7 +34,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: configuration
+  name: infra-configs
   namespace: flux-system
 spec:
   dependsOn:

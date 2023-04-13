@@ -8,6 +8,8 @@ spec:
   interval: 30s
   dependsOn:
   - name: git
+  - name: infra-configs
+  - name: infra-controllers
   sourceRef:
     kind: GitRepository
     name: flux-system
