@@ -5,4 +5,5 @@ resources:
   - ./ImagePolicy.yaml
   - ./ImageRepository.yaml
   - ./Ingress.yaml
+  - ./Namespace.yaml
   - ./Service.yaml
