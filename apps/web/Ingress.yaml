@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - gitops.iteam.life
+        - meow.iteam.life
       secretName: web-tls
   rules:
-    - host: gitops.iteam.life
+    - host: meow.iteam.life
       http:
         paths:
           - path: /
