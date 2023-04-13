@@ -1,0 +1,24 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web
+  # annotations:
+    # kubernetes.io/ingress.class: "nginx"
+    # cert-manager.io/cluster-issuer: "letsencrypt"
+spec:
+  # tls:
+  #   - hosts:
+  #       - gitops.iteam.life
+  #     secretName: web-tls
+  rules:
+    - host: gitops.iteam.life
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: web
+                port:
+                  number: 80

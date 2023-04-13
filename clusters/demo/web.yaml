@@ -1,0 +1,17 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: web
+  namespace: flux-system
+spec:
+  interval: 30s
+  dependsOn:
+  - name: git
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./apps/web
+  prune: true
+  wait: true
+  timeout: 2m0s
