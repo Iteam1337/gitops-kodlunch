@@ -5,7 +5,7 @@ metadata:
   name: web
   namespace: flux-system
 spec:
-  image: ghghcr.io/iteam1337/gitops-kodlunch-web
+  image: ghcr.io/iteam1337/gitops-kodlunch-web
   interval: 30s
   provider: generic
   secretRef:
