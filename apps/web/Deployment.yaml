@@ -16,7 +16,7 @@ spec:
       imagePullSecrets:
       - name: regcred
       containers:
-      - image: ghcr.io/iteam1337/gitops-kodlunch-web:0.0.4 # {"$imagepolicy": "flux-system:web"}
+      - image: ghcr.io/iteam1337/gitops-kodlunch-web:0.0.5 # {"$imagepolicy": "flux-system:web"}
         name: web
         ports:
         - containerPort: 80
